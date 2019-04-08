@@ -3,7 +3,7 @@
 All the material of the training is available here. The course is based on various other courses and teaching material. More details are given below.
 
 ### Required Software
-- R (at least 3.4.3 https://cloud.r-project.org/bin/windows/base/ )
+- R https://cloud.r-project.org/bin/windows/base/ )
 - RStudio ( https://www.rstudio.com/products/rstudio/download/#download )
  
  Please install these two software before the training.
