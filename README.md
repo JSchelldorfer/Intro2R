@@ -1,6 +1,6 @@
-# Introduction to R for Actuaries 2019
+# Introduction to R for Actuaries, Bratislava 2019
 
-All the material of the training are available here.
+All the material of the training is available here.
 
 ### Required Software
 - R (at least 3.4.3 https://cloud.r-project.org/bin/windows/base/ )
