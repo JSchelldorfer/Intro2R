@@ -3,7 +3,7 @@
 All the material of the training is available here. The course is based on various other courses and teaching material. More details are given below.
 
 ### Required Software
-- R https://cloud.r-project.org/bin/windows/base/ )
+- R (https://cloud.r-project.org/bin/windows/base/ )
 - RStudio ( https://www.rstudio.com/products/rstudio/download/#download )
  
  Please install these two software before the training.
@@ -43,7 +43,7 @@ head(freMTPLfreq)
  
 ### References
 The training material is mainly based on the following literature:
-- 31th International Summer School of the Swiss Association of Actuaries (2018)
+- "Insurance Analytics, A Primer", 31th International Summer School of the Swiss Association of Actuaries (2018)
   (https://github.com/fpechon/SummerSchool)
 - "A Tutorial Introduction to R" by Aaron A. King, Stu Field, Ben Bolker, Steve Ellner (http://kingaa.github.io/R_Tutorial/)
 - "Introduction to R" by Jonathan Cornelissen (https://github.com/datacamp/courses-intro-to-r)
