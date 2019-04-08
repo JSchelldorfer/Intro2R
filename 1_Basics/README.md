@@ -7,9 +7,10 @@ For this chapter you need the following packages:
 
 ```{r, include=TRUE, message=FALSE, warning=FALSE}
 options(encoding = 'UTF-8')
-#Loading all the necessary packages
+# install all the necessary packages (if needed)
 if (!require("MASS")) install.packages("MASS")
 
+#Loading all the necessary packages
 require("MASS")
 
 ```
