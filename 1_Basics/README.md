@@ -2,6 +2,18 @@
 
 Here you find the material for the chapter "R Basics".
 
+### Packages
+For this chapter you need the following packages:
+
+```{r, include=TRUE, message=FALSE, warning=FALSE}
+options(encoding = 'UTF-8')
+#Loading all the necessary packages
+if (!require("MASS")) install.packages("MASS")
+
+require("MASS")
+
+```
+
 ### References
 The training material in this chapter closely follows:
 - "A Tutorial Introduction to R" by Aaron A. King, Stu Field, Ben Bolker, Steve Ellner (http://kingaa.github.io/R_Tutorial/)
