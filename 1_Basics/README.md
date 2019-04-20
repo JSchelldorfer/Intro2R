@@ -11,7 +11,7 @@ options(encoding = 'UTF-8')
 if (!require("MASS")) install.packages("MASS")
 
 #Loading all the necessary packages
-require("MASS")
+library("MASS")
 
 ```
 
