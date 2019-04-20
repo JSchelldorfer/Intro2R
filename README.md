@@ -83,5 +83,5 @@ The training material is based on (and closely follows) the following literature
 - "Introduction to R" by Jonathan Cornelissen (https://github.com/datacamp/courses-intro-to-r)
 - "Introduction to Data Science with R", a video course by RStudio and O'Reilly Media (https://github.com/rstudio/Intro)
 - "Case Study: French Motor Third-Party Liability Claims" from A. Noll, R. Salzmann and M.V. Wüthrich (https://www.actuarialdatascience.org/ADS-Tutorials/)
-- https://www.actuarialdatascience.org
+- "Actuarial Data Science", Swiss Association of Actuaries, https://www.actuarialdatascience.org
 
