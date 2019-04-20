@@ -65,3 +65,15 @@ summary(dataset)
 ```
 
 # Descriptive Analysis of the portfolio
+```{r, tidy=TRUE}
+#
+```
+
+# Fit a GLM for Claims Frequency
+```{r, tidy=TRUE}
+#
+```
+# Fit a GLM for Claims Severity
+```{r, tidy=TRUE}
+#
+```

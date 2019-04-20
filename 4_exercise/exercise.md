@@ -109,3 +109,21 @@ summary(dataset)
 
 Descriptive Analysis of the portfolio
 =====================================
+
+``` r
+#
+```
+
+Fit a GLM for Claims Frequency
+==============================
+
+``` r
+#
+```
+
+Fit a GLM for Claims Severity
+=============================
+
+``` r
+#
+```
