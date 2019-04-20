@@ -82,6 +82,8 @@ The training material is based on (and closely follows) the following literature
 - "A Tutorial Introduction to R" by Aaron A. King, Stu Field, Ben Bolker, Steve Ellner (http://kingaa.github.io/R_Tutorial/)
 - "Introduction to R" by Jonathan Cornelissen (https://github.com/datacamp/courses-intro-to-r)
 - "Introduction to Data Science with R", a video course by RStudio and O'Reilly Media (https://github.com/rstudio/Intro)
+- "CASdatasets Package Vignette", Reference Manual (http://cas.uqam.ca/)
+- "Computational Actuarial Science with R", A. Charpentier, CRC Press
 - "Case Study: French Motor Third-Party Liability Claims" from A. Noll, R. Salzmann and M.V. Wüthrich (https://www.actuarialdatascience.org/ADS-Tutorials/)
 - "Actuarial Data Science", Swiss Association of Actuaries, https://www.actuarialdatascience.org
 
