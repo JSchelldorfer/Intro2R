@@ -9,10 +9,12 @@ For this chapter you need the following packages:
 options(encoding = 'UTF-8')
 
 #Loading all the necessary packages
+if (!require("CASdatasets")) install.packages("CASdatasets", repos = "http://cas.uqam.ca/pub/R/", type="source")
 if (!require("caret")) install.packages("caret")
 if (!require("visreg")) install.packages("visreg")
 if (!require("MASS")) install.packages("MASS")
 
+library("CASdatasets")
 library("caret")
 library("visreg")
 library("MASS")
