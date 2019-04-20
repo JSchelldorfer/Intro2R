@@ -36,17 +36,17 @@ If the installation succeeded, the following lines load the packages.
  ``` r
 library("MASS")
 library("tidyverse")
-require("mgcv")
-require("caret")
-require("gridExtra")
-require("plyr")
-require("visreg")
-require("plotrix")
-require("rgdal")
-require("rgeos")
-require("xtable")
-require("maptools")
-require("CASdatasets")
+library("mgcv")
+library("caret")
+library("gridExtra")
+library("plyr")
+library("visreg")
+library("plotrix")
+library("rgdal")
+library("rgeos")
+library("xtable")
+library("maptools")
+library("CASdatasets")
 ```
 
 If the installation and loading succeeded, the following lines should load a dataset and show the first six lines.
