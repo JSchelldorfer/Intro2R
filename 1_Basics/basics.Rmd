@@ -1,33 +1,301 @@
 ---
 title: "basics"
-author: "Jürg Schelldorfer"
+author: "Juerg Schelldorfer"
 date: "8 April 2019"
 output:
 #  html_document: default
-#   md_document:
-#    variant: markdown_github
+   md_document:
+    variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## 1 - What is R?
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+R is a computing environment that combines:
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+* a programming language called S, developed by John Chambers at Bell Labs, that implements the idea of programming with data (Chambers 1998),
 
-```{r cars}
-summary(cars)
+* an extensive set of functions for classical and modern statistical data analysis and modeling,
+
+* powerful numerical analysis tools for linear algebra, differential equations, and stochastics,
+
+* graphics functions for visualizing data and model output,
+
+* a modular and extensible structure that supports a vast array of optional **add-on packages**, and
+
+* extensive help and documentation facilities.
+
+* **free** and **open source**
+
+* widely usedboth in academia and industry
+
+* teaser:  http://shiny.rstudio.com/gallery
+
+
+R is an open source software project, available for free download (R Core Team 2014a). Originally a research project in statistical computing (Ihaka and Gentleman 1996), it is now managed by a development team that includes a number of well-regarded statisticians, and is widely used by statistical researchers and working scientists as a platform for making new methods available to users.
+
+R has been developed by statisticians and is hence very **convenient for actuaries**.
+
+## 2 - What is RStudio?
+
+Rtudio (https://www.rstudio.com/) is an integrated Development Environment (IDE) for R:
+
+* like Microsoft Word, Excel, etc.
+* built to help you write R code, run R code, and analyze data with R
+* text editor, latex integration, debugging tool, version control
+* Easy reporting via RShiny
+
+To work with RStudio is one option to work with R. Other options are using Jupyter Notebooks (https://jupyter.org/).
+
+RStudio consists of four different panes, each keeps track of separate information. 
+
+* R Console
+* R Scipt
+* Plot
+* Help files
+
+See a short video on https://www.rstudio.com/products/RStudio/#Desktop
+
+## 3 - Calculations
+
+### R as a simple caclulator
+```{r}
+# Calculate 3 + 4
+sqrt(2)
+x <- 3
+y <- x^2
+x + y
+sin(2*pi)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+### Creating vectors
+```{r}
+c(1, 5, 80)
+2:11
+a <- c(1, 6, 10, 22, 7, 13)
+mean(a)
+sum(a)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+### Creating matrices and data frames
+```{r}
+matrix()
+m <- matrix(1:6, nrow=3, ncol=2, byrow = TRUE)
+m
+```
+
+```{r}
+data.frame()
+df <- data.frame(Name = c("I","You","He"),Gender = as.factor(c(0,1,0)), Age = c(21,47,33))
+df
+```
+
+### An **R statement** may consist of...
+
+* an asignment stores the result of the calculation under temp_a and temp_b
+```{r}
+temp_a <- 3 * (4 + 2)
+temp_b <- temp_a + 2.5
+```
+* a name of an object: display object
+```{r}
+temp_a
+```
+
+* a call to a function:  numerical or graphical result
+```{r}
+mean(c(temp_a,temp_b))
+mn <- mean(c(temp_a,temp_b))
+```
+
+A function is called by its name followed by ().
+
+### Assignment and Workspace
+
+* Everything in R is an object and has a certain name like temp_a, mean, mn.
+* R stores objects in your workspace
+```{r}
+temp_a <- 3 * (4 + 2)
+```
+
+* ATTENTION: Overwriting an object in R throughs no warning
+```{r}
+temp_a <- temp_b^2
+temp_a
+```
+
+## 4 - Where to find help?
+
+* Help about any function
+```{r}
+# ?foo
+?lm
+```
+* If you have any question, google 'how do I...with R'.
++ huge community
++ already asked by somebody else
+* Very useful and helpful Q&A website:  http://stackexchange.com/Cheat
+* Sheet for Base R https://www.rstudio.com/resources/cheatsheets/
+* R Reference Card https://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf
+* **Learning by doing** is particularly true for programming
+
+## 5 - Data Import and Export
+
+How do we get our data into R?
+
+### Loading data from R (for training)
+There are several packages containing claims data for Non-Life insurance.
+```{r}
+library(MASS)
+#library(CASdatasets)
+#library(insuranceData)
+```
+
+For example, laod the data "Insurance"" from the MASS package:
+```{r}
+data("Insurance")
+?Insurance
+head(Insurance)
+```
+
+### Loading data from file
+
+Often, you have your data as a .csv file available. Chek *?read.table* for more information about this function.
+
+```{r}
+data_path <- "C:/Users/juerg/AktuarDataScience/Varia/2019_SSA/"
+df <- read.table(paste(data_path,"dataCar.csv",sep=""), header = TRUE,sep=",")
+# ?read.csv and many other specific loading packages available
+```
+
+Some useful functions to correctly load/save the data.
+
+Let's set the working directory - the folder from which to operate (e.g.,save and load from).  Use:
+```{r}
+getwd()  ## print the current working directory
+#setwd("yourpath")
+```
+
+Or alternatively in RStudio use 'Session -> Set Working Directory -> Choose Directory...'
+
+Importing data in R is easy. Different ways depending on the format (csv, txt, xlsx, etc.).
+Alternative:  use the 'Import Dataset' tool in RStudio (upper-rightpanel)
+
+```{r}
+data_path <- "C:/Users/juerg/AktuarDataScience/Varia/2019_SSA/"
+df <- read.table(paste(data_path,"dataCar.csv",sep=""), header = TRUE,sep=",")
+str(df)
+```
+
+To save or write data to a file:
+
+```{r}
+#write.table(df, file = "xy.txt", sep = " ")
+```
+
+where x is the data object to be stored an xy.txt.
+
+Excel-files:  Use CSV
+* > write.csv(...)
+* > write.csv2(...)
+
+## 6 - R Objects
+
+Everything in R is an object, for example
+* data frame:  most essential data structure in R
+```{r}
+str(Insurance)
+```
+* vector, e.g.  a column of the data set Insurance
+```{r}
+Age <- Insurance$Age
+str(Age)
+```
+
+Goal is to look at or use a part of your object. To access only part of an object, use[ ]:
+* for vectors: myvector[x]
+* for two-dimensional objects, e.g.  data frames or matrices: mydata.frame[x, y]
+Specify the indices by a vector (e.g.c(1, 2, 6)) and separate the indices of different dimensions by commas.
+
+Let’s play around with the indexing of a data frame:  two-dimensionalobject!
+
+```{r}
+Insurance[ , ]
+c(1, 3, 7)
+1:10
+Insurance[1:10 , ]
+Insurance[-c( 1, 3, 7), ] # negative indices are excluded> d.sport[ , 2:3]
+Insurance[c(1, 3, 6), 2:3]
+```
+
+## 7 - R Functions
+
+Example function calls
+```{r}
+mean(Insurance$Claims)
+quantile(Insurance$Claims)
+quantile(Insurance$Claims, probs = c(0.75, 0.9))
+```
+Always check out the functions help function with ?mean and ?quantile.
+
+Functions consist of mandatory and optional arguments:
+mean(x, trim = 0, na.rm = FALSE, ...)
+x:  mandatory argument
+trim:  optional argument, default is 0
+na.rm:  optional argument, default is FALSE
+
+The arguments of a function have a defined order and each argument has its own unique name.
+```{r}
+mean(x = Insurance$Claims, na.rm = TRUE)
+```
+You can either use the names of the arguments, or place the values in the correct order (or a mix of both):
+```{r}
+mean(Insurance$Claims, ,TRUE)
+```
+Example functions with no mandatory arguments:  matrix(), vector(),array(), list()> ?matrix
+
+
+## 8 - Useful functions
+
+Useful functions (look for help by typing ?str):
+
+* str()
+* nrow() and ncol()
+* dim()
+* summary()
+* apply()
+* head() and tail()
+see also R Reference card
+
+## 9 - Packages
+
+By default, R only provides a basic set of functions.  Additional functions(and datasets) are obtained by loading additional * add-on packages*
+
+Install and load "MASS" package (https://cran.r-project.org/web/packages/MASS/MASS.pdf. There is always a pdf containing information about the package.
+```{r}
+#install.packages("MASS") # install onto computer once
+require(MASS) # for every R session.
+library(MASS)
+```
+
+Online resources:
+
+* list of all packages:http://cran.r-project.org/web/packages/I
+
+* by topic: http://cran.r-project.org/web/views/I
+
+* ask Google
+
+## 10 - Further reading
+
+For continuation on that level, see
+ftp://ess.r-project.org/users/sfs/RKurs/R.Intro/slides.pdf
+
+Google's R Style Guide ("how to write good R code")
+https://google.github.io/styleguide/Rguide.xml
+
+RStudio Cheat Sheets (phantastic!)
+https://www.rstudio.com/resources/cheatsheets/
