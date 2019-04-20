@@ -73,7 +73,7 @@ head(freMTPLfreq)
 
  
 ### References
-The training material is mainly based on the following literature:
+The training material is based on (and closely follows) the following literature:
 - "Insurance Analytics, A Primer", 31th International Summer School of the Swiss Association of Actuaries (2018)
   (https://github.com/fpechon/SummerSchool)
 - "Data Analytics for Non-Life Insurance Pricing" by M.V. Wüthrich and Ch. Buser (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2870308)
