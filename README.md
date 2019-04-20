@@ -1,24 +1,55 @@
 # A Short Introduction to R for Actuaries, Bratislava 2019
 
-All the material of the training is available here. The course closely follows other courses and teaching material. More details are given below.
+All the material of the training is available here on GitHub. The course closely follows other courses and teaching material listed below.
 
 ### Required Software
-- R (https://cloud.r-project.org/bin/windows/base/ )
-- RStudio ( https://www.rstudio.com/products/rstudio/download/#download )
+In order to make best use of the training, please bring a laptop and install the following software on your laptop **before** the training (there is no time during the training).
+- R (https://cloud.r-project.org/bin/windows/base/)
+- RStudio ( https://www.rstudio.com/products/rstudio/download/#download)
+
+It can be that you can not install the software on your company laptop, then bring your private laptop with you.
+
+However, you can still follow the training without the software installed. The material is provided as html file as well.
  
- Please install these two software before the training.
  
- ### Required Packages
- After installing the required software, please run the following commands to install the additional required packages:
+### Required Packages
+After installing the required software, please run the following commands to install the specific packages used during the training. (It is known that the "CASdatasets" package can sometimes not be installed. No problem, we provide you with the required data/code separately on this GitHub repository).
  
  ``` r
-if (!require("sp")) install.packages("sp")
-if (!require("xts")) install.packages("xts")
+if (!require("MASS")) install.packages("MASS")
+if (!require("tidyverse")) install.packages("tidyverse")
+if (!require("caret")) install.packages("caret")
+if (!require("mgcv")) install.packages("mgcv")
+if (!require("plyr")) install.packages("plyr")
+if (!require("gridExtra")) install.packages("gridExtra")
+if (!require("visreg")) install.packages("visreg")
+if (!require("plotrix")) install.packages("plotrix")
+if (!require("rgeos")) install.packages("rgeos", type="source")
+if (!require("rgdal")) install.packages("rgdal", type="source")
+if (!require("xtable")) install.packages("xtable")
+if (!require("maptools")) install.packages("maptools")
 if (!require("CASdatasets")) install.packages("CASdatasets", repos = "http://cas.uqam.ca/pub/R/", type="source")
+```
+
+If the installation succeeded, the following lines load the packages.
+
+ ``` r
+library("MASS")
+library("tidyverse")
+require("mgcv")
+require("caret")
+require("gridExtra")
+require("plyr")
+require("visreg")
+require("plotrix")
+require("rgdal")
+require("rgeos")
+require("xtable")
+require("maptools")
 require("CASdatasets")
 ```
 
-If the installation succeeded, the following lines should load a dataset and show the first six lines.
+If the installation and loading succeeded, the following lines should load a dataset and show the first six lines.
 
 ``` r
 data("freMTPLfreq")
@@ -45,9 +76,12 @@ head(freMTPLfreq)
 The training material is mainly based on the following literature:
 - "Insurance Analytics, A Primer", 31th International Summer School of the Swiss Association of Actuaries (2018)
   (https://github.com/fpechon/SummerSchool)
+- "Data Analytics for Non-Life Insurance Pricing" by M.V. Wüthrich and Ch. Buser (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2870308)
+- "Introduction to R", Statistical Consulting Group, Seminar für Statistik (SfS), ETH Zürich (ftp://ess.r-project.org/users/sfs/RKurs/R.Intro/slides.pdf)
+- "An Introduction to R" by W. N. Venables, D. M. Smithand the R Core Team (https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
 - "A Tutorial Introduction to R" by Aaron A. King, Stu Field, Ben Bolker, Steve Ellner (http://kingaa.github.io/R_Tutorial/)
 - "Introduction to R" by Jonathan Cornelissen (https://github.com/datacamp/courses-intro-to-r)
-- "An Introduction to R" by W. N. Venables, D. M. Smithand the R Core Team (https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
 - "Introduction to Data Science with R", a video course by RStudio and O'Reilly Media (https://github.com/rstudio/Intro)
 - "Case Study: French Motor Third-Party Liability Claims" from A. Noll, R. Salzmann and M.V. Wüthrich (https://www.actuarialdatascience.org/ADS-Tutorials/)
-- "Data Analytics for Non-Life Insurance Pricing" by M.V. Wüthrich and Ch. Buser (https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2870308)
+- https://www.actuarialdatascience.org
+
