@@ -1,6 +1,6 @@
-# Introduction to R for Actuaries, Bratislava 2019
+# A Short Introduction to R for Actuaries, Bratislava 2019
 
-All the material of the training is available here. The course is based on various other courses and teaching material. More details are given below.
+All the material of the training is available here. The course closely follows other courses and teaching material. More details are given below.
 
 ### Required Software
 - R (https://cloud.r-project.org/bin/windows/base/ )
