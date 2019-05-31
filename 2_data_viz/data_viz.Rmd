@@ -3,9 +3,9 @@ title: "data_viz"
 author: "Juerg Schelldorfer"
 date: "8 April 2019"
 output: 
-#  html_document
-   md_document:
-    variant: markdown_github
+  html_document
+#   md_document:
+#    variant: markdown_github
 ---
 ```{r, include=TRUE, message=FALSE, warning=FALSE}
 options(encoding = 'UTF-8')
