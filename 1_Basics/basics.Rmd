@@ -1,11 +1,11 @@
 ---
 title: "basics"
 author: "Juerg Schelldorfer"
-date: "8 April 2019"
+date: "31 May 2019"
 output:
-#  html_document: default
-   md_document:
-    variant: markdown_github
+  html_document: default
+#   md_document:
+#    variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}

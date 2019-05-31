@@ -3,15 +3,20 @@
 
 R is a computing environment that combines:
 
--   a programming language called S, developed by John Chambers at Bell Labs, that implements the idea of programming with data (Chambers 1998),
+-   a programming language called S, developed by John Chambers at Bell
+    Labs, that implements the idea of programming with data (Chambers
+    1998),
 
--   an extensive set of functions for classical and modern statistical data analysis and modeling,
+-   an extensive set of functions for classical and modern statistical
+    data analysis and modeling,
 
--   powerful numerical analysis tools for linear algebra, differential equations, and stochastics,
+-   powerful numerical analysis tools for linear algebra, differential
+    equations, and stochastics,
 
 -   graphics functions for visualizing data and model output,
 
--   a modular and extensible structure that supports a vast array of optional **add-on packages**, and
+-   a modular and extensible structure that supports a vast array of
+    optional **add-on packages**, and
 
 -   extensive help and documentation facilities.
 
@@ -21,23 +26,32 @@ R is a computing environment that combines:
 
 -   teaser: <http://shiny.rstudio.com/gallery>
 
-R is an open source software project, available for free download (R Core Team 2014a). Originally a research project in statistical computing (Ihaka and Gentleman 1996), it is now managed by a development team that includes a number of well-regarded statisticians, and is widely used by statistical researchers and working scientists as a platform for making new methods available to users.
+R is an open source software project, available for free download (R
+Core Team 2014a). Originally a research project in statistical computing
+(Ihaka and Gentleman 1996), it is now managed by a development team that
+includes a number of well-regarded statisticians, and is widely used by
+statistical researchers and working scientists as a platform for making
+new methods available to users.
 
-R has been developed by statisticians and is hence very **convenient for actuaries**.
+R has been developed by statisticians and is hence very **convenient for
+actuaries**.
 
 2 - What is RStudio?
 --------------------
 
-Rtudio (<https://www.rstudio.com/>) is an integrated Development Environment (IDE) for R:
+Rtudio (<https://www.rstudio.com/>) is an integrated Development
+Environment (IDE) for R:
 
 -   like Microsoft Word, Excel, etc.
 -   built to help you write R code, run R code, and analyze data with R
 -   text editor, latex integration, debugging tool, version control
 -   Easy reporting via RShiny
 
-To work with RStudio is one option to work with R. Other options are using Jupyter Notebooks (<https://jupyter.org/>).
+To work with RStudio is one option to work with R. Other options are
+using Jupyter Notebooks (<https://jupyter.org/>).
 
-RStudio consists of four different panes, each keeps track of separate information.
+RStudio consists of four different panes, each keeps track of separate
+information.
 
 -   R Console
 -   R Scipt
@@ -51,83 +65,61 @@ See a short video on <https://www.rstudio.com/products/RStudio/#Desktop>
 
 ### R as a simple caclulator
 
-``` r
-# Calculate 3 + 4
-sqrt(2)
-```
+    # Calculate 3 + 4
+    sqrt(2)
 
     ## [1] 1.414214
 
-``` r
-x <- 3
-y <- x^2
-x + y
-```
+    x <- 3
+    y <- x^2
+    x + y
 
     ## [1] 12
 
-``` r
-sin(2*pi)
-```
+    sin(2*pi)
 
     ## [1] -2.449213e-16
 
 ### Creating vectors
 
-``` r
-c(1, 5, 80)
-```
+    c(1, 5, 80)
 
     ## [1]  1  5 80
 
-``` r
-2:11
-```
+    2:11
 
     ##  [1]  2  3  4  5  6  7  8  9 10 11
 
-``` r
-a <- c(1, 6, 10, 22, 7, 13)
-mean(a)
-```
+    a <- c(1, 6, 10, 22, 7, 13)
+    mean(a)
 
     ## [1] 9.833333
 
-``` r
-sum(a)
-```
+    sum(a)
 
     ## [1] 59
 
 ### Creating matrices and data frames
 
-``` r
-matrix()
-```
+    matrix()
 
     ##      [,1]
     ## [1,]   NA
 
-``` r
-m <- matrix(1:6, nrow=3, ncol=2, byrow = TRUE)
-m
-```
+    m <- matrix(1:6, nrow=3, ncol=2, byrow = TRUE)
+    m
 
     ##      [,1] [,2]
     ## [1,]    1    2
     ## [2,]    3    4
     ## [3,]    5    6
 
-``` r
-data.frame()
-```
+    data.frame()
 
     ## data frame with 0 columns and 0 rows
 
-``` r
-df <- data.frame(Name = c("I","You","He"),Gender = as.factor(c(0,1,0)), Age = c(21,47,33))
-df
-```
+    df <- data.frame(Name = c("I","You","He"),Gender = as.factor(c(0,1,0)), Age = c(21,47,33))
+    df
 
     ##   Name Gender Age
     ## 1    I      0  21
@@ -136,50 +128,50 @@ df
 
 ### An **R statement** may consist of...
 
--   an asignment stores the result of the calculation under temp\_a and temp\_b
+-   an asignment stores the result of the calculation under temp\_a and
+    temp\_b
 
-``` r
-temp_a <- 3 * (4 + 2)
-temp_b <- temp_a + 2.5
-```
+<!-- -->
+
+    temp_a <- 3 * (4 + 2)
+    temp_b <- temp_a + 2.5
 
 -   a name of an object: display object
 
-``` r
-temp_a
-```
+<!-- -->
+
+    temp_a
 
     ## [1] 18
 
 -   a call to a function: numerical or graphical result
 
-``` r
-mean(c(temp_a,temp_b))
-```
+<!-- -->
+
+    mean(c(temp_a,temp_b))
 
     ## [1] 19.25
 
-``` r
-mn <- mean(c(temp_a,temp_b))
-```
+    mn <- mean(c(temp_a,temp_b))
 
 A function is called by its name followed by ().
 
 ### Assignment and Workspace
 
--   Everything in R is an object and has a certain name like temp\_a, mean, mn.
+-   Everything in R is an object and has a certain name like temp\_a,
+    mean, mn.
 -   R stores objects in your workspace
 
-``` r
-temp_a <- 3 * (4 + 2)
-```
+<!-- -->
+
+    temp_a <- 3 * (4 + 2)
 
 -   ATTENTION: Overwriting an object in R throughs no warning
 
-``` r
-temp_a <- temp_b^2
-temp_a
-```
+<!-- -->
+
+    temp_a <- temp_b^2
+    temp_a
 
     ## [1] 420.25
 
@@ -188,19 +180,21 @@ temp_a
 
 -   Help about any function
 
-``` r
-# ?foo
-?lm
-```
+<!-- -->
+
+    # ?foo
+    ?lm
 
     ## starting httpd help server ... done
 
 -   If you have any question, google 'how do I...with R'.
 -   huge community
 -   already asked by somebody else
--   Very useful and helpful Q&A website: <http://stackexchange.com/Cheat>
+-   Very useful and helpful Q&A website:
+    <http://stackexchange.com/Cheat>
 -   Sheet for Base R <https://www.rstudio.com/resources/cheatsheets/>
--   R Reference Card <https://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf>
+-   R Reference Card
+    <https://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf>
 -   **Learning by doing** is particularly true for programming
 
 5 - Data Import and Export
@@ -210,21 +204,18 @@ How do we get our data into R?
 
 ### Loading data from R (for training)
 
-There are several packages containing claims data for Non-Life insurance.
+There are several packages containing claims data for Non-Life
+insurance.
 
-``` r
-library(MASS)
-#library(CASdatasets)
-#library(insuranceData)
-```
+    library(MASS)
+    #library(CASdatasets)
+    #library(insuranceData)
 
 For example, laod the data "Insurance"" from the MASS package:
 
-``` r
-data("Insurance")
-?Insurance
-head(Insurance)
-```
+    data("Insurance")
+    ?Insurance
+    head(Insurance)
 
     ##   District  Group   Age Holders Claims
     ## 1        1    <1l   <25     197     38
@@ -236,37 +227,34 @@ head(Insurance)
 
 ### Loading data from file
 
-Often, you have your data as a .csv file available. Chek *?read.table* for more information about this function.
+Often, you have your data as a .csv file available. Chek *?read.table*
+for more information about this function.
 
-``` r
-data_path <- "C:/Users/juerg/AktuarDataScience/Varia/2019_SSA/"
-df <- read.table(paste(data_path,"dataCar.csv",sep=""), header = TRUE,sep=",")
-# ?read.csv and many other specific loading packages available
-```
+    data_path <- "C:/Users/juerg/AktuarDataScience/Varia/2019_SSA/"
+    df <- read.table(paste(data_path,"dataCar.csv",sep=""), header = TRUE,sep=",")
+    # ?read.csv and many other specific loading packages available
 
 Some useful functions to correctly load/save the data.
 
-Let's set the working directory - the folder from which to operate (e.g.,save and load from). Use:
+Let's set the working directory - the folder from which to operate
+(e.g.,save and load from). Use:
 
-``` r
-getwd()  ## print the current working directory
-```
+    getwd()  ## print the current working directory
 
     ## [1] "C:/Users/juerg/AktuarDataScience/Varia/2019_SSA"
 
-``` r
-#setwd("yourpath")
-```
+    #setwd("yourpath")
 
-Or alternatively in RStudio use 'Session -&gt; Set Working Directory -&gt; Choose Directory...'
+Or alternatively in RStudio use 'Session -&gt; Set Working Directory
+-&gt; Choose Directory...'
 
-Importing data in R is easy. Different ways depending on the format (csv, txt, xlsx, etc.). Alternative: use the 'Import Dataset' tool in RStudio (upper-rightpanel)
+Importing data in R is easy. Different ways depending on the format
+(csv, txt, xlsx, etc.). Alternative: use the 'Import Dataset' tool in
+RStudio (upper-rightpanel)
 
-``` r
-data_path <- "C:/Users/juerg/AktuarDataScience/Varia/2019_SSA/"
-df <- read.table(paste(data_path,"dataCar.csv",sep=""), header = TRUE,sep=",")
-str(df)
-```
+    data_path <- "C:/Users/juerg/AktuarDataScience/Varia/2019_SSA/"
+    df <- read.table(paste(data_path,"dataCar.csv",sep=""), header = TRUE,sep=",")
+    str(df)
 
     ## 'data.frame':    67856 obs. of  12 variables:
     ##  $ X        : int  1 2 3 4 5 6 7 8 9 10 ...
@@ -284,9 +272,7 @@ str(df)
 
 To save or write data to a file:
 
-``` r
-#write.table(df, file = "xy.txt", sep = " ")
-```
+    #write.table(df, file = "xy.txt", sep = " ")
 
 where x is the data object to be stored an xy.txt.
 
@@ -295,11 +281,10 @@ Excel-files: Use CSV \* &gt; write.csv(...) \* &gt; write.csv2(...)
 6 - R Objects
 -------------
 
-Everything in R is an object, for example \* data frame: most essential data structure in R
+Everything in R is an object, for example \* data frame: most essential
+data structure in R
 
-``` r
-str(Insurance)
-```
+    str(Insurance)
 
     ## 'data.frame':    64 obs. of  5 variables:
     ##  $ District: Factor w/ 4 levels "1","2","3","4": 1 1 1 1 1 1 1 1 1 1 ...
@@ -310,20 +295,23 @@ str(Insurance)
 
 -   vector, e.g. a column of the data set Insurance
 
-``` r
-Age <- Insurance$Age
-str(Age)
-```
+<!-- -->
+
+    Age <- Insurance$Age
+    str(Age)
 
     ##  Ord.factor w/ 4 levels "<25"<"25-29"<..: 1 2 3 4 1 2 3 4 1 2 ...
 
-Goal is to look at or use a part of your object. To access only part of an object, use\[ \]: \* for vectors: myvector\[x\] \* for two-dimensional objects, e.g. data frames or matrices: mydata.frame\[x, y\] Specify the indices by a vector (e.g.c(1, 2, 6)) and separate the indices of different dimensions by commas.
+Goal is to look at or use a part of your object. To access only part of
+an object, use\[ \]: \* for vectors: myvector\[x\] \* for
+two-dimensional objects, e.g. data frames or matrices: mydata.frame\[x,
+y\] Specify the indices by a vector (e.g.c(1, 2, 6)) and separate the
+indices of different dimensions by commas.
 
-Let’s play around with the indexing of a data frame: two-dimensionalobject!
+Let’s play around with the indexing of a data frame:
+two-dimensionalobject!
 
-``` r
-Insurance[ , ]
-```
+    Insurance[ , ]
 
     ##    District  Group   Age Holders Claims
     ## 1         1    <1l   <25     197     38
@@ -391,21 +379,15 @@ Insurance[ , ]
     ## 63        4    >2l 30-35      25      8
     ## 64        4    >2l   >35     114     33
 
-``` r
-c(1, 3, 7)
-```
+    c(1, 3, 7)
 
     ## [1] 1 3 7
 
-``` r
-1:10
-```
+    1:10
 
     ##  [1]  1  2  3  4  5  6  7  8  9 10
 
-``` r
-Insurance[1:10 , ]
-```
+    Insurance[1:10 , ]
 
     ##    District  Group   Age Holders Claims
     ## 1         1    <1l   <25     197     38
@@ -419,9 +401,7 @@ Insurance[1:10 , ]
     ## 9         1 1.5-2l   <25     133     19
     ## 10        1 1.5-2l 25-29     286     52
 
-``` r
-Insurance[-c( 1, 3, 7), ] # negative indices are excluded> d.sport[ , 2:3]
-```
+    Insurance[-c( 1, 3, 7), ] # negative indices are excluded> d.sport[ , 2:3]
 
     ##    District  Group   Age Holders Claims
     ## 2         1    <1l 25-29     264     35
@@ -486,9 +466,7 @@ Insurance[-c( 1, 3, 7), ] # negative indices are excluded> d.sport[ , 2:3]
     ## 63        4    >2l 30-35      25      8
     ## 64        4    >2l   >35     114     33
 
-``` r
-Insurance[c(1, 3, 6), 2:3]
-```
+    Insurance[c(1, 3, 6), 2:3]
 
     ##    Group   Age
     ## 1    <1l   <25
@@ -500,47 +478,42 @@ Insurance[c(1, 3, 6), 2:3]
 
 Example function calls
 
-``` r
-mean(Insurance$Claims)
-```
+    mean(Insurance$Claims)
 
     ## [1] 49.23438
 
-``` r
-quantile(Insurance$Claims)
-```
+    quantile(Insurance$Claims)
 
     ##    0%   25%   50%   75%  100% 
     ##   0.0   9.5  22.0  55.5 400.0
 
-``` r
-quantile(Insurance$Claims, probs = c(0.75, 0.9))
-```
+    quantile(Insurance$Claims, probs = c(0.75, 0.9))
 
     ##   75%   90% 
     ##  55.5 101.7
 
 Always check out the functions help function with ?mean and ?quantile.
 
-Functions consist of mandatory and optional arguments: mean(x, trim = 0, na.rm = FALSE, ...) x: mandatory argument trim: optional argument, default is 0 na.rm: optional argument, default is FALSE
+Functions consist of mandatory and optional arguments: mean(x, trim = 0,
+na.rm = FALSE, ...) x: mandatory argument trim: optional argument,
+default is 0 na.rm: optional argument, default is FALSE
 
-The arguments of a function have a defined order and each argument has its own unique name.
+The arguments of a function have a defined order and each argument has
+its own unique name.
 
-``` r
-mean(x = Insurance$Claims, na.rm = TRUE)
-```
-
-    ## [1] 49.23438
-
-You can either use the names of the arguments, or place the values in the correct order (or a mix of both):
-
-``` r
-mean(Insurance$Claims, ,TRUE)
-```
+    mean(x = Insurance$Claims, na.rm = TRUE)
 
     ## [1] 49.23438
 
-Example functions with no mandatory arguments: matrix(), vector(),array(), list()&gt; ?matrix
+You can either use the names of the arguments, or place the values in
+the correct order (or a mix of both):
+
+    mean(Insurance$Claims, ,TRUE)
+
+    ## [1] 49.23438
+
+Example functions with no mandatory arguments: matrix(),
+vector(),array(), list()&gt; ?matrix
 
 8 - Useful functions
 --------------------
@@ -557,15 +530,17 @@ Useful functions (look for help by typing ?str):
 9 - Packages
 ------------
 
-By default, R only provides a basic set of functions. Additional functions(and datasets) are obtained by loading additional \* add-on packages\*
+By default, R only provides a basic set of functions. Additional
+functions(and datasets) are obtained by loading additional \* add-on
+packages\*
 
-Install and load "MASS" package (<https://cran.r-project.org/web/packages/MASS/MASS.pdf>. There is always a pdf containing information about the package.
+Install and load "MASS" package
+(<https://cran.r-project.org/web/packages/MASS/MASS.pdf>. There is
+always a pdf containing information about the package.
 
-``` r
-#install.packages("MASS") # install onto computer once
-require(MASS) # for every R session.
-library(MASS)
-```
+    #install.packages("MASS") # install onto computer once
+    require(MASS) # for every R session.
+    library(MASS)
 
 Online resources:
 
@@ -578,8 +553,11 @@ Online resources:
 10 - Further reading
 --------------------
 
-For continuation on that level, see <ftp://ess.r-project.org/users/sfs/RKurs/R.Intro/slides.pdf>
+For continuation on that level, see
+<ftp://ess.r-project.org/users/sfs/RKurs/R.Intro/slides.pdf>
 
-Google's R Style Guide ("how to write good R code") <https://google.github.io/styleguide/Rguide.xml>
+Google's R Style Guide ("how to write good R code")
+<https://google.github.io/styleguide/Rguide.xml>
 
-RStudio Cheat Sheets (phantastic!) <https://www.rstudio.com/resources/cheatsheets/>
+RStudio Cheat Sheets (phantastic!)
+<https://www.rstudio.com/resources/cheatsheets/>
