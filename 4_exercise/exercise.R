@@ -1,6 +1,5 @@
-
+## ---- include=TRUE, message=FALSE, warning=FALSE-------------------------
 options(encoding = 'UTF-8')
-
 #Loading all the necessary packages
 if (!require("CASdatasets")) install.packages("CASdatasets", repos = "http://cas.uqam.ca/pub/R/", type="source")
 if (!require("tidyverse")) install.packages("tidyverse")
@@ -20,10 +19,8 @@ require("gridExtra")
 require("visreg")
 require("MASS")
 
-# Introduction
 
-### Load data
-
+## ---- tidy=TRUE----------------------------------------------------------
 ## If CASdatasets package can be loaded, run the following
 ## Loading the dataset
 # require("CASdatasets")
@@ -40,13 +37,26 @@ load("df_ausprivauto0405.RData") # load(file="path to the file df_ausprivauto040
 dataset <- df_ausprivauto0405 # store as dataset for easier re-use of previous code
 
 
-### Check data structure
-
+## ---- tidy=TRUE----------------------------------------------------------
 head(dataset)
 
+
+## ---- tidy=TRUE----------------------------------------------------------
 str(dataset)
 
+
+## ---- tidy=TRUE----------------------------------------------------------
 summary(dataset)
 
 
-# Descriptive Analysis of the portfolio
+## ---- tidy=TRUE----------------------------------------------------------
+#
+
+
+## ---- tidy=TRUE----------------------------------------------------------
+#
+
+
+## ---- tidy=TRUE----------------------------------------------------------
+#
+

@@ -26,20 +26,16 @@ Introduction
 ### Load data
 
 ``` r
-## If CASdatasets package can be loaded, run the following
-## Loading the dataset
-# require("CASdatasets")
-# data("ausprivauto0405")
-# 
-## split the data set for analysis
-# set.seed(85)
-# folds = createDataPartition(ausprivauto0405$ClaimNb, 0.5)
-# df_ausprivauto0405 = ausprivauto0405[folds[[1]], ]
-# save(df_ausprivauto0405, file="../df_ausprivauto0405.RData")
+## If CASdatasets package can be loaded, run the following Loading the
+## dataset require('CASdatasets') data('ausprivauto0405') split the data set
+## for analysis set.seed(85) folds =
+## createDataPartition(ausprivauto0405$ClaimNb, 0.5) df_ausprivauto0405 =
+## ausprivauto0405[folds[[1]], ] save(df_ausprivauto0405,
+## file='../df_ausprivauto0405.RData')
 
 ## If CASdatasets package can not be loaded, run the following:
-load("df_ausprivauto0405.RData") # load(file="path to the file df_ausprivauto0405")
-dataset <- df_ausprivauto0405 # store as dataset for easier re-use of previous code
+load("df_ausprivauto0405.RData")  # load(file='path to the file df_ausprivauto0405')
+dataset <- df_ausprivauto0405  # store as dataset for easier re-use of previous code
 ```
 
 ### Check data structure
@@ -111,19 +107,19 @@ Descriptive Analysis of the portfolio
 =====================================
 
 ``` r
-#
+# 
 ```
 
 Fit a GLM for Claims Frequency
 ==============================
 
 ``` r
-#
+# 
 ```
 
 Fit a GLM for Claims Severity
 =============================
 
 ``` r
-#
+# 
 ```
